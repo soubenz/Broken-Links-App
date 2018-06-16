@@ -1,32 +1,44 @@
 import scrapy
 from scrapy.spiders import SitemapSpider
 from scrapy.linkextractors import LinkExtractor
-from scrapy.crawler import CrawlerProcess
-from scrapy.utils.project import get_project_settings
+from  urllib.parse import urljoin
 from scrapy.http import Request
 import sys
 from broken_links.items import Link
+from config  import Config
 EXTENSIONS = {
    'scrapy.extensions.telnet.TelnetConsole': None,
 }
  
 class SiteSpider(SitemapSpider):
+  
+  config = Config()
+  config_file = config.getConfigFile()
+  name= 'single_check'
+  starting_urls=[]
+  for url in  config.getStartingUrls():
+    if url.startswith('http://') or url.startswith('https://'):
+      starting_urls.append(urljoin(url, '/robots.txt'))
 
-  name= 'sou'
-
-  def __init__(self, isCheckSocial, *args, **kwargs):
-        super(MySpider, self).__init__(*args, **kwargs)
-        
-  sitemap_urls = ['http://www.digitbin.com/sitemap_index.xml']
-
+    else :
+      url_tmp = 'http://' + url
+      starting_urls.append(urljoin(url_tmp, '/robots.txt'))
+ 
+  sitemap_urls = starting_urls
+    
   sitemap_rules = [('', 'parse_article')]
   handle_httpstatus_list = [404]
+
+  def __init__(self,  *args, **kwargs):
+        super(SiteSpider, self).__init__(*args, **kwargs)
+        #isCheckSocial = Config.getIgnoreSocial()
+        
   
   def parse_article(self, response):
 
 
     # print('parse_article url:', response.url)
-#domains =
+ 
 
     social_domains = ('buzzfeed.com','facebook.com','vk.com','pinterest.com','twitter.com','instagram.com','tumblr.com')
     links = LinkExtractor(deny_domains=social_domains).extract_links(response)
@@ -46,6 +58,13 @@ class SiteSpider(SitemapSpider):
       info['url'] = response.url
       yield info
 
+      
+      
+         
+  
+ 
+
+   
  
 
    
