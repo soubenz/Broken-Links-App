@@ -1,7 +1,10 @@
 import scrapy
 from scrapy.spiders import SitemapSpider
 from scrapy.linkextractors import LinkExtractor
-from  urllib.parse import urljoin
+try:
+    from urllib.parse import  urljoin
+except ImportError:
+     from urlparse import  urljoin
 from scrapy.http import Request
 import sys
 from broken_links.items import Link
@@ -9,9 +12,9 @@ from config  import Config
 EXTENSIONS = {
    'scrapy.extensions.telnet.TelnetConsole': None,
 }
- 
+
 class SiteSpider(SitemapSpider):
-  
+
   config = Config()
   config_file = config.getConfigFile()
   name= 'single_check'
@@ -23,22 +26,22 @@ class SiteSpider(SitemapSpider):
     else :
       url_tmp = 'http://' + url
       starting_urls.append(urljoin(url_tmp, '/robots.txt'))
- 
+
   sitemap_urls = starting_urls
-    
+
   sitemap_rules = [('', 'parse_article')]
   handle_httpstatus_list = [404]
 
   def __init__(self,  *args, **kwargs):
         super(SiteSpider, self).__init__(*args, **kwargs)
         #isCheckSocial = Config.getIgnoreSocial()
-        
-  
+
+
   def parse_article(self, response):
 
 
     # print('parse_article url:', response.url)
- 
+
 
     social_domains = ('buzzfeed.com','facebook.com','vk.com','pinterest.com','twitter.com','instagram.com','tumblr.com')
     links = LinkExtractor(deny_domains=social_domains).extract_links(response)
@@ -57,14 +60,3 @@ class SiteSpider(SitemapSpider):
       info = Link()
       info['url'] = response.url
       yield info
-
-      
-      
-         
-  
- 
-
-   
- 
-
-   
