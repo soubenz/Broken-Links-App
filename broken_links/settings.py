@@ -1,11 +1,14 @@
- 
+
 
 BOT_NAME = 'broken_links'
 
 SPIDER_MODULES = ['broken_links.spiders']
 NEWSPIDER_MODULE = 'broken_links.spiders'
 
-
+RETRY_ENABLED = False
+# REDIRECT_ENABLED= False
+# RETRY_TIMES = 2
+# RETRY_HTTP_CODES = [ 500, 502, 503, 504, 507]
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 't2 (+http://www.yourdomain.com)'
 
@@ -79,4 +82,3 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
- 
