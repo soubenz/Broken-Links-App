@@ -1,0 +1,322 @@
+2018-07-30 17:52:12 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: broken_links)
+2018-07-30 17:52:12 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.5.0, Python 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 23:32:55) - [GCC 7.2.0], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Linux-4.15.0-29-generic-x86_64-with-debian-stretch-sid
+2018-07-30 17:52:12 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'broken_links.spiders', 'ROBOTSTXT_OBEY': True, 'RETRY_ENABLED': False, 'SPIDER_MODULES': ['broken_links.spiders'], 'BOT_NAME': 'broken_links', 'LOG_FILE': '/home/trululu/Documents/Broken-Links-App/test.pylog.txt'}
+2018-07-30 17:52:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-07-30 17:52:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-07-30 17:52:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-07-30 17:52:12 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-07-30 17:52:12 [scrapy.core.engine] INFO: Spider opened
+2018-07-30 17:52:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-07-30 17:52:12 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6046
+2018-07-30 17:52:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/robots.txt> (referer: None)
+2018-07-30 17:52:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/robots.txt> (referer: None)
+2018-07-30 17:52:13 [sitemap_spider] INFO: ['http://www.mysqltutorial.org/sitemap.xml']
+2018-07-30 17:52:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/sitemap_index.xml> from <GET http://www.mysqltutorial.org/sitemap.xml>
+2018-07-30 17:52:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/sitemap_index.xml> (referer: http://www.mysqltutorial.org/robots.txt)
+2018-07-30 17:52:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/page-sitemap.xml> (referer: http://www.mysqltutorial.org/sitemap_index.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/connecting-to-mysql-using-jdbc-driver/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://www.mysqltutorial.org/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysqlbooks.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-drop-column/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-hosting.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/perl-mysql/perl-mysql-connect/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-last_insert_id.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-drop-table> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-table-locking/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-view-local-cascaded-in-with-check-option> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-transaction.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-character-set/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-collation/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-create-drop-index.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-triggers/modifying-mysql-events/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/managing-trigger-in-mysql.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/create-the-first-trigger-in-mysql.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-triggers/working-mysql-scheduled-event/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-trigger-implementation.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/perl-mysql/perl-mysql-create-table/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.phpmyadmin.net/robots.txt> from <GET http://www.phpmyadmin.net/robots.txt>
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://partners.hostgator.com/robots.txt> (referer: None)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET http://partners.hostgator.com/c/179503/178156/3094>
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/sql-triggers.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/tryit/> (referer: http://www.mysqltutorial.org/)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-string-length/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/robots.txt> from <GET http://www.amazon.com/robots.txt>
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.lynda.com/robots.txt> (referer: None)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-triggers/create-multiple-triggers-for-the-same-trigger-event-and-action-time/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.phpmyadmin.net/robots.txt> (referer: None)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.phpmyadmin.net/home_page/downloads.php> from <GET http://www.phpmyadmin.net/home_page/downloads.php>
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://collation-charts.org/robots.txt> (referer: None)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.phpmyadmin.net/downloads/> from <GET https://www.phpmyadmin.net/home_page/downloads.php>
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.phpmyadmin.net/downloads/> (referer: http://www.mysqltutorial.org/mysql-hosting.aspx)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/robots.txt> from <GET http://dev.mysql.com/robots.txt>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.lynda.com/MySQL-tutorials/MySQL-Essential-Training/139986-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11889&utm_campaign=CD15204&aid=CD15204&bid=11889> from <GET http://www.lynda.com/MySQL-tutorials/MySQL-Essential-Training/139986-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11889&utm_campaign=CD15204&aid=CD15204&bid=11889>
+2018-07-30 17:52:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/robots.txt> (referer: None)
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.lynda.com/MySQL-tutorials/PHP-MySQL-Essential-Training/119003-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11889&utm_campaign=CD15204&aid=CD15204&bid=11889> from <GET http://www.lynda.com/MySQL-tutorials/PHP-MySQL-Essential-Training/119003-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11889&utm_campaign=CD15204&aid=CD15204&bid=11889>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/0596100892/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596100892&linkCode=as2&tag=invitatempla-20&linkId=6327TYWNMCJ7XS5I> from <GET http://www.amazon.com/gp/product/0596100892/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596100892&linkCode=as2&tag=invitatempla-20&linkId=6327TYWNMCJ7XS5I>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/0596009577/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596009577&linkCode=as2&tag=invitatempla-20&linkId=TMADFUK2F4GDRM6L> from <GET http://www.amazon.com/gp/product/0596009577/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596009577&linkCode=as2&tag=invitatempla-20&linkId=TMADFUK2F4GDRM6L>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/0071782796/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071782796&linkCode=as2&tag=invitatempla-20&linkId=PGZPWZK4PLGLAAGT> from <GET http://www.amazon.com/gp/product/0071782796/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071782796&linkCode=as2&tag=invitatempla-20&linkId=PGZPWZK4PLGLAAGT>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/0596006306/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596006306&linkCode=as2&tag=invitatempla-20&linkId=6RZX72TOXUUDDCZT> from <GET http://www.amazon.com/gp/product/0596006306/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596006306&linkCode=as2&tag=invitatempla-20&linkId=6RZX72TOXUUDDCZT>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/1449314287/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449314287&linkCode=as2&tag=invitatempla-20&linkId=FPOEIDZCOCFDWHTJ> from <GET http://www.amazon.com/gp/product/1449314287/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449314287&linkCode=as2&tag=invitatempla-20&linkId=FPOEIDZCOCFDWHTJ>
+2018-07-30 17:52:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/1449339581/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449339581&linkCode=as2&tag=invitatempla-20&linkId=FYJ7W2KTNL7EBRK7> from <GET http://www.amazon.com/gp/product/1449339581/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449339581&linkCode=as2&tag=invitatempla-20&linkId=FYJ7W2KTNL7EBRK7>
+2018-07-30 17:52:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/0071788573/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071788573&linkCode=as2&tag=invitatempla-20&linkId=MB2QOKKV6Y62GF54> from <GET http://www.amazon.com/gp/product/0071788573/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071788573&linkCode=as2&tag=invitatempla-20&linkId=MB2QOKKV6Y62GF54>
+2018-07-30 17:52:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/gp/product/0470416912/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0470416912&linkCode=as2&tag=invitatempla-20&linkId=L3OV7US3Y5SRB46Q> from <GET http://www.amazon.com/gp/product/0470416912/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0470416912&linkCode=as2&tag=invitatempla-20&linkId=L3OV7US3Y5SRB46Q>
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://collation-charts.org/mysql60/> (referer: http://www.mysqltutorial.org/mysql-collation/)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/gp/product/1449314287/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449314287&linkCode=as2&tag=invitatempla-20&linkId=FPOEIDZCOCFDWHTJ> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/gp/product/0470416912/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0470416912&linkCode=as2&tag=invitatempla-20&linkId=L3OV7US3Y5SRB46Q> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/gp/product/0596100892/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596100892&linkCode=as2&tag=invitatempla-20&linkId=6327TYWNMCJ7XS5I> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/gp/product/0596006306/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596006306&linkCode=as2&tag=invitatempla-20&linkId=6RZX72TOXUUDDCZT> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/Effective-MySQL-Optimizing-Statements-Oracle/dp/0071782796> from <GET https://www.amazon.com/gp/product/0071782796/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071782796&linkCode=as2&tag=invitatempla-20&linkId=PGZPWZK4PLGLAAGT>
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/gp/product/0071788573/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071788573&linkCode=as2&tag=invitatempla-20&linkId=MB2QOKKV6Y62GF54> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/privacy-policy/> (referer: http://www.mysqltutorial.org/connecting-to-mysql-using-jdbc-driver/)
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/gp/product/1449314287/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449314287&linkCode=as2&tag=invitatempla-20&linkId=FPOEIDZCOCFDWHTJ>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/gp/product/0470416912/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0470416912&linkCode=as2&tag=invitatempla-20&linkId=L3OV7US3Y5SRB46Q>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/gp/product/0596100892/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596100892&linkCode=as2&tag=invitatempla-20&linkId=6327TYWNMCJ7XS5I>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/gp/product/0596006306/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596006306&linkCode=as2&tag=invitatempla-20&linkId=6RZX72TOXUUDDCZT>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/Effective-MySQL-Optimizing-Statements-Oracle/dp/0071782796> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/MySQL-High-Availability-Building-Centers/dp/1449339581> from <GET https://www.amazon.com/gp/product/1449339581/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449339581&linkCode=as2&tag=invitatempla-20&linkId=FYJ7W2KTNL7EBRK7>
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/gp/product/0071788573/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071788573&linkCode=as2&tag=invitatempla-20&linkId=MB2QOKKV6Y62GF54>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.amazon.com/Understanding-MySQL-Internals-Discovering-Improving/dp/0596009577> from <GET https://www.amazon.com/gp/product/0596009577/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596009577&linkCode=as2&tag=invitatempla-20&linkId=TMADFUK2F4GDRM6L>
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://mysqltutorial.org/robots.txt> (referer: None)
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/Effective-MySQL-Optimizing-Statements-Oracle/dp/0071782796>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/MySQL-High-Availability-Building-Centers/dp/1449339581> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/managing-sql-views.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (503) <GET https://www.amazon.com/Understanding-MySQL-Internals-Discovering-Improving/dp/0596009577> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/MySQL-High-Availability-Building-Centers/dp/1449339581>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://mysqltutorial.org//tryit/> (referer: http://www.mysqltutorial.org/connecting-to-mysql-using-jdbc-driver/)
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/create-sql-updatable-views.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <503 https://www.amazon.com/Understanding-MySQL-Internals-Discovering-Improving/dp/0596009577>: HTTP status code is not handled or not allowed
+2018-07-30 17:52:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.oracle.com/robots.txt> (referer: None)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-views.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/create-sql-views-mysql.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-view-with-check-option/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/robots.txt> (referer: None)
+2018-07-30 17:52:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.lynda.com/PHP-tutorials/PHP-MySQL-Essential-Training-1-Basics/587674-2.html> from <GET https://www.lynda.com/MySQL-tutorials/PHP-MySQL-Essential-Training/119003-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11889&utm_campaign=CD15204&aid=CD15204&bid=11889>
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-stored-function/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-signal-resignal/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.zentut.com/robots.txt> (referer: None)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html> (referer: http://www.mysqltutorial.org/connecting-to-mysql-using-jdbc-driver/)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/listing-stored-procedures-in-mysql-database.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lynda.com/MySQL-tutorials/MySQL-Essential-Training/139986-2.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=11889&utm_campaign=CD15204&aid=CD15204&bid=11889> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/stored-procedures-loop.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/introduction-to-sql-stored-procedures.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-if-statement/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/doc/refman/5.7/en/charset.html> from <GET http://dev.mysql.com/doc/refman/5.7/en/charset.html>
+2018-07-30 17:52:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/> from <GET http://mysqltutorial.org//>
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-stored-procedures-return-multiple-values/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/stored-procedures-parameters.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/variables-in-stored-procedures.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-error-handling-in-stored-procedures/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-functions.aspx> from <GET http://mysqltutorial.org//mysql-functions.aspx>
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/conditional-control-if-case-statement-stored-procedures.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/doc/refman/5.7/en/string-functions.html> from <GET http://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_length>
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-cursor/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-insert-ignore/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-temporary-table/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/how-to-load-sample-database-into-mysql-database-server.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-resources.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-sample-database.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-join/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lynda.com/PHP-tutorials/PHP-MySQL-Essential-Training-1-Basics/587674-2.html> (referer: http://www.mysqltutorial.org/mysqlbooks.aspx)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/doc/refman/5.7/en/charset.html> (referer: http://www.mysqltutorial.org/mysql-collation/)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/install-mysql/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/understand-mysql-table-types-innodb-myisam.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-jdbc-blob> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-order-by/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET http://www.www.mysqltutorial.org/robots.txt>: DNS lookup failed: no results for hostname lookup: www.www.mysqltutorial.org.
+Traceback (most recent call last):
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/endpoints.py", line 954, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+DNSLookupError: DNS lookup failed: no results for hostname lookup: www.www.mysqltutorial.org.
+2018-07-30 17:52:19 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET http://wwww.mysqltutorial.org/robots.txt>: DNS lookup failed: no results for hostname lookup: wwww.mysqltutorial.org.
+Traceback (most recent call last):
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/endpoints.py", line 954, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+DNSLookupError: DNS lookup failed: no results for hostname lookup: wwww.mysqltutorial.org.
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-data-types.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org//mysql-create-table/> (referer: http://www.mysqltutorial.org/mysql-insert-ignore/)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.postgresqltutorial.com/robots.txt> (referer: None)
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/getting-started-with-mysql-stored-procedures.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:19 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.www.mysqltutorial.org/mysql-select-statement-query-data.aspx>
+Traceback (most recent call last):
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/endpoints.py", line 954, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+DNSLookupError: DNS lookup failed: no results for hostname lookup: www.www.mysqltutorial.org.
+2018-07-30 17:52:19 [scrapy.core.scraper] ERROR: Error downloading <GET http://wwww.mysqltutorial.org/mysql-sample-database.aspx>
+Traceback (most recent call last):
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/trululu/miniconda2/lib/python2.7/site-packages/twisted/internet/endpoints.py", line 954, in startConnectionAttempts
+    "no results for hostname lookup: {}".format(self._hostStr)
+DNSLookupError: DNS lookup failed: no results for hostname lookup: wwww.mysqltutorial.org.
+2018-07-30 17:52:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.perltutorial.org/> from <GET http://www.zentut.com/perl-tutorial/>
+2018-07-30 17:52:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-case-statement/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.postgresqltutorial.com/postgresql-materialized-views/> (referer: http://www.mysqltutorial.org/mysql-views.aspx)
+2018-07-30 17:52:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-sample-database.aspx> from <GET http://www.mysqltutorial.org//mysql-sample-database.aspx>
+2018-07-30 17:52:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/downloads/installer/> from <GET http://dev.mysql.com/downloads/installer/>
+2018-07-30 17:52:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.7-zip.org/robots.txt> from <GET http://www.7-zip.org/robots.txt>
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://www.7-zip.org/robots.txt> (referer: None)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.sqlservertutorial.net/robots.txt> (referer: None)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/tryit/query/mysql-order-by/#1> (referer: http://www.mysqltutorial.org/mysql-order-by/)
+2018-07-30 17:52:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.7-zip.org/> from <GET http://www.7-zip.org>
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.sqlitetutorial.net/robots.txt> (referer: None)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.7-zip.org/> (referer: http://www.mysqltutorial.org/mysql-sample-database.aspx)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/doc/refman/8.0/en/sql-mode.html#sql-mode-strict> (referer: http://www.mysqltutorial.org/mysql-insert-ignore/)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.sqlservertutorial.net/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/doc/refman/5.7/en/string-functions.html> (referer: http://www.mysqltutorial.org/mysql-string-length/)
+2018-07-30 17:52:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/how-to-load-sample-database-into-mysql-database-server.aspx> from <GET http://www.mysqltutorial.org//how-to-load-sample-database-into-mysql-database-server.aspx>
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.postgresqltutorial.com> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.sqlitetutorial.net/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-insert-statement.aspx> (referer: http://www.mysqltutorial.org/mysql-join/)
+2018-07-30 17:52:20 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-select-statement-query-data.aspx> (referer: http://www.mysqltutorial.org/mysql-join/)
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-right-join/> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-right-join/>
+2018-07-30 17:52:21 [scrapy.core.scraper] DEBUG: Scraped from <404 http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-insert-statement.aspx>
+{'url': 'http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-insert-statement.aspx',
+ 'webpage': 'http://www.mysqltutorial.org/mysql-join/'}
+2018-07-30 17:52:21 [scrapy.core.scraper] DEBUG: Scraped from <404 http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-select-statement-query-data.aspx>
+{'url': 'http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-select-statement-query-data.aspx',
+ 'webpage': 'http://www.mysqltutorial.org/mysql-join/'}
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/downloads/installer/> (referer: http://www.mysqltutorial.org/install-mysql/)
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-inner-join.aspx> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-inner-join.aspx>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-cross-join/> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-cross-join/>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-self-join/> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-self-join/>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-left-join.aspx> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-left-join.aspx>
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://www.bullzip.com/robots.txt> (referer: None)
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.phpmyadmin.net/home_page/index.php> from <GET http://www.phpmyadmin.net/home_page/index.php>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.phpmyadmin.net/> from <GET https://www.phpmyadmin.net/home_page/index.php>
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.phpmyadmin.net/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.bullzip.com/products/a2m/info.php> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqlfront.de/robots.txt> (referer: None)
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqlfront.de/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-sample-database.aspx> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-sample-database.aspx>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.webyog.com/robots.txt> from <GET http://www.webyog.com/robots.txt>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.slideshare.net/robots.txt> from <GET http://www.slideshare.net/robots.txt>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/doc/refman/5.7/en/optimization.html> from <GET http://dev.mysql.com/doc/refman/5.7/en/optimization.html>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.mysqltutorial.org/mysql-foreign-key/> from <GET http://www.mysqltutorial.org/www.mysqltutorial.org/mysql-foreign-key/>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.mysql.com/robots.txt> from <GET http://www.mysql.com/robots.txt>
+2018-07-30 17:52:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.slideshare.net/robots.txt> (referer: None)
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.slideshare.net/ZendCon/joinfu-the-art-of-sql-tuning-for-mysql-presentation> from <GET http://www.slideshare.net/ZendCon/joinfu-the-art-of-sql-tuning-for-mysql-presentation>
+2018-07-30 17:52:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.percona.com/blog/robots.txt> from <GET http://www.mysqlperformanceblog.com/robots.txt>
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://www.webyog.com/robots.txt> (referer: None)
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.percona.com/blog/robots.txt> from <GET http://www.percona.com/blog/robots.txt>
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.webyog.com/> from <GET http://www.webyog.com/>
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/doc/refman/5.7/en/optimization.html> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.webyog.com/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.sqltutorial.org/robots.txt> (referer: None)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.oracletutorial.com/robots.txt> (referer: None)
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/downloads/mysql/> from <GET http://dev.mysql.com/downloads/mysql/>
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.slideshare.net/ZendCon/joinfu-the-art-of-sql-tuning-for-mysql-presentation> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://community.oracle.com/welcome> from <GET https://wikis.oracle.com/robots.txt>
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://mysqlserverteam.com/robots.txt> (referer: None)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.sqltutorial.org/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mysql.com/robots.txt> (referer: None)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://community.oracle.com/welcome> (referer: None)
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://community.oracle.com/welcome> from <GET https://wikis.oracle.com/display/mysql/Home>
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://community.oracle.com/robots.txt> (referer: None)
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.mysql.com/products/workbench/index.html> from <GET http://www.mysql.com/products/workbench/index.html>
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://community.oracle.com/welcome> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-mysql-create-table/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/downloads/mysql/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.percona.com/blog/404.html> from <GET https://www.percona.com/blog/robots.txt>
+2018-07-30 17:52:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.mysql.com/> from <GET http://www.mysql.com/>
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.percona.com/blog/404.html> (referer: None)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-mysql-delete/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/setting-up-mysql-jdbc-development-environment/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-mysql-update-data/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-insert-data-into-mysql-table/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-calling-mysql-stored-procedures/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-mysql-transaction/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mysql.com/products/workbench/index.html> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.percona.com/blog/> from <GET http://www.mysqlperformanceblog.com/>
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-mysql-blob/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-exists/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-update-join/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-delete-join/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/introduction-sql-views.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.oracletutorial.com/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-select-statement-query-data.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-distinct.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.perltutorial.org/robots.txt> (referer: None)
+2018-07-30 17:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.plsqltutorial.com/robots.txt> (referer: None)
+2018-07-30 17:52:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://dev.mysql.com/downloads/connector/j/> from <GET http://dev.mysql.com/downloads/connector/j/>
+2018-07-30 17:52:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.percona.com/robots.txt> from <GET http://www.percona.com/robots.txt>
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/what-is-mysql/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/tryit/query/mysql-regular-expression/#1> (referer: http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.oracle.com/robots.txt> (referer: None)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.oracle.com/technetwork/java/javase/downloads/index.html> (referer: http://www.mysqltutorial.org/setting-up-mysql-jdbc-development-environment/)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/tryit/query/mysql-exists/#1> (referer: http://www.mysqltutorial.org/mysql-exists/)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.percona.com/robots.txt> (referer: None)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/tryit/query/mysql-distinct/#1> (referer: http://www.mysqltutorial.org/mysql-distinct.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/tryit/query/mysql-select/#1> (referer: http://www.mysqltutorial.org/mysql-select-statement-query-data.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://dev.mysql.com/downloads/connector/j/> (referer: http://www.mysqltutorial.org/setting-up-mysql-jdbc-development-environment/)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/python-connecting-mysql-databases/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/robots.txt> (referer: None)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/Michael_Widenius> (referer: http://www.mysqltutorial.org/what-is-mysql/)
+2018-07-30 17:52:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.percona.com/blog/> from <GET http://www.percona.com/blog/>
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-foreign-key/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mysql.com/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.plsqltutorial.com> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.perltutorial.org/> (referer: http://www.mysqltutorial.org/sql-triggers.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://garyhouston.github.io/robots.txt> (referer: None)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-and/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://garyhouston.github.io/regex/> (referer: http://www.mysqltutorial.org/mysql-regular-expression-regexp.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.percona.com/blog/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://mysqlserverteam.com/> (referer: http://www.mysqltutorial.org/mysql-resources.aspx)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/about-us/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-or/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-int/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/php-mysql/php-mysql-create-table/> (referer: http://www.mysqltutorial.org/php-insert-data-into-mysql-table/)
+2018-07-30 17:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/mysql-stored-procedure-tutorial.aspx> (referer: http://www.mysqltutorial.org/page-sitemap.xml)
+2018-07-30 17:52:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.mysqltutorial.org/jdbc-overview/> (referer: http://www.mysqltutorial.org/page-sitemap.xml)

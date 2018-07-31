@@ -1,5 +1,6 @@
 
 import json
+import os
 class Config(object):
 
 
@@ -10,8 +11,9 @@ class Config(object):
   def __init__(self):
 
 
-    with open('config.json','r') as file :
-          self.config_file = json.load(file)
+    with open(os.path.dirname(os.path.realpath(__file__))+'/configs.json') as file:
+                # self.config_file = ConfigObj(os.path.dirname(os.path.realpath(__file__))+'/configs.json')'config.json','r') as file :
+        self.config_file = json.load(file)
 
     # self.config_file = {'urls_limit' : 5, 'isIgnoreSocial': True, 'starting_websites':starting_urls}
 
@@ -29,7 +31,7 @@ class Config(object):
 
     return self.config_file
 
-  
+
 
   def getUrlLimit(self):
       pass

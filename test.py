@@ -13,8 +13,7 @@ class Launcher(object):
 
         self.config_file = config.getConfigFile()
         settings = get_project_settings()
-        if os.path.exists(os.path.dirname(os.path.realpath(__file__))+'/__configs.ini'):
-            data = ConfigObj(os.path.dirname(os.path.realpath(__file__))+'/__configs.ini')
+
 
         if self.config_file['show_log'] is False:
             settings['LOG_FILE'] = os.path.join(os.path.dirname(os.path.realpath(__file__)),'log')+'/log - {}.txt'.format(datetime.today().strftime("%A, %d. %B %Y %I:%M%p"))
