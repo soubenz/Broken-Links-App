@@ -47,7 +47,7 @@ class AmazonSpider(scrapy.Spider):
             url= urljoin(url_tmp, '/sitemap.xml')
 
         self.url = url
-
+        self.position = 0
     def start_requests(self):
         yield Request(self.url, callback=self.parse_sitemap,headers= self.headers)
 
@@ -89,6 +89,8 @@ class AmazonSpider(scrapy.Spider):
         print(response.status)
         if response.status in error_status :
             info = Link()
+            self.position += 1
+            info['position'] = self.position
             info['url'] = response.url
             info['webpage'] = webpage
 
@@ -98,7 +100,9 @@ class AmazonSpider(scrapy.Spider):
     def download_errback(self, e, url, current_url):
         self.logger.info('++++++++'+ url)
         info = Link()
+        self.position += 1
+        info['position'] = self.position
         info['url'] = url
         info['webpage'] = current_url
         yield info
-        # print url
+  
