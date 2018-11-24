@@ -1,26 +1,25 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import re
+import sys
+
 import scrapy
+from broken_links.items import Link
+from config import Config
+from scrapy.http import Request
+from scrapy.linkextractors import LinkExtractor
+from scrapy.shell import inspect_response
 from scrapy.spiders import SitemapSpider
 from scrapy.utils.sitemap import Sitemap
-from scrapy.linkextractors import LinkExtractor
+
 try:
-    from urllib.parse import  urljoin
+    from urllib.parse import urljoin
 except ImportError:
-     from urlparse import  urljoin
-from scrapy.http import Request
-import sys
-from broken_links.items import Link
-from config  import Config
-import re
-from scrapy.shell import inspect_response
-
-from scrapy.http import Request
-# from Amazon_ML_v2.items import CrawlingItem
+    from urlparse import urljoin
 
 
-class AmazonSpider(scrapy.Spider):
+class CheckerCore(scrapy.Spider):
     config = Config()
     config_file = config.getConfigFile()
     name= 'test'
@@ -35,21 +34,18 @@ class AmazonSpider(scrapy.Spider):
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36',
     }
 
-
     def __init__(self, crawlID=None,url = None , *args, **kwargs):
-        super(AmazonSpider, self).__init__(*args, **kwargs)
-        # Load configs amazon
+        super(CheckerCore, self).__init__(*args, **kwargs)
         self.domain = url
-          # for url in  config.getStartingUrls():
         if url.startswith('http://') or url.startswith('https://'):
             url =urljoin(url, '/sitemap.xml')
-
         else :
             url_tmp = 'http://' + url
             url= urljoin(url_tmp, '/sitemap.xml')
 
         self.url = url
         self.position = 0
+
     def start_requests(self):
         yield Request(self.url, callback=self.parse_sitemap,headers= self.headers)
 
@@ -63,10 +59,7 @@ class AmazonSpider(scrapy.Spider):
             else :
                 yield Request(url,self.parse_article, headers= self.headers)
 
-
-
     def parse_article(self, response):
-
         social_domains = ('buzzfeed.com','facebook.com','vk.com','pinterest.com','twitter.com','instagram.com','tumblr.com')
         links = LinkExtractor(deny_domains=social_domains).extract_links(response)
         for link in links:
@@ -76,42 +69,26 @@ class AmazonSpider(scrapy.Spider):
                 info['position'] = self.position
                 info['url'] = link.url
                 info['webpage'] = response.url
-
                 yield info
             else:
-                yield Request(link.url,self.check_if_broken, meta={"webpage":response.url}, errback = lambda x: self.download_errback(x, link.url, response.url))
-                
-            # try:
-            # except :
-            #      self.logger.info('++++++++'+ url)
-
-    #
-    # def parse_robots_file(self, response):
-    #     text = response.body.split('\n')
-    #     for rule in text:
-    #         match = re.findall()
+                yield Request(link.url,self.check_if_broken, meta={"webpage":response.url}, 
+                                errback = lambda x: self.download_errback(x, link.url, response.url))
 
     def check_if_broken(self,response):
         webpage = response.meta['webpage']
         error_status = (404,400,405)
-        # print(response.status)
         if response.status in error_status :
             info = Link()
             self.position += 1
             info['position'] = self.position
             info['url'] = response.url
             info['webpage'] = webpage
-
             yield info
 
-
     def download_errback(self, e, url, current_url):
-        
-        # self.logger.info('++++++++'+ url)
         info = Link()
         self.position += 1
         info['position'] = self.position
         info['url'] = url
         info['webpage'] = current_url
         yield info
-  
