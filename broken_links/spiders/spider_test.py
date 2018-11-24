@@ -27,7 +27,9 @@ class AmazonSpider(scrapy.Spider):
 
     handle_httpstatus_list = [404,400,405]
 
-
+    custom_settings = {
+        'LOG_LEVEL':'INFO'
+    }
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36',
@@ -61,21 +63,27 @@ class AmazonSpider(scrapy.Spider):
             else :
                 yield Request(url,self.parse_article, headers= self.headers)
 
+
+
     def parse_article(self, response):
-    #
-    #
-    #     # print('parse_article url:', response.url)
-    #
-    #
+
         social_domains = ('buzzfeed.com','facebook.com','vk.com','pinterest.com','twitter.com','instagram.com','tumblr.com')
         links = LinkExtractor(deny_domains=social_domains).extract_links(response)
         for link in links:
-          #info = BrokenUrl()
-          #info['url'] = link.url
+            if not (link.url.startswith('http://') or link.url.startswith('https://')):
+                info = Link()
+                self.position += 1
+                info['position'] = self.position
+                info['url'] = link.url
+                info['webpage'] = response.url
 
-          # yield Request(link.url,self.check_if_broken, meta={"webpage":response.url} )
-          yield Request(link.url,self.check_if_broken, meta={"webpage":response.url}, errback = lambda x: self.download_errback(x, link.url, response.url))
-
+                yield info
+            else:
+                yield Request(link.url,self.check_if_broken, meta={"webpage":response.url}, errback = lambda x: self.download_errback(x, link.url, response.url))
+                
+            # try:
+            # except :
+            #      self.logger.info('++++++++'+ url)
 
     #
     # def parse_robots_file(self, response):
@@ -86,7 +94,7 @@ class AmazonSpider(scrapy.Spider):
     def check_if_broken(self,response):
         webpage = response.meta['webpage']
         error_status = (404,400,405)
-        print(response.status)
+        # print(response.status)
         if response.status in error_status :
             info = Link()
             self.position += 1
@@ -98,7 +106,8 @@ class AmazonSpider(scrapy.Spider):
 
 
     def download_errback(self, e, url, current_url):
-        self.logger.info('++++++++'+ url)
+        
+        # self.logger.info('++++++++'+ url)
         info = Link()
         self.position += 1
         info['position'] = self.position
