@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import re
-import sys
 
 import scrapy
 from broken_links.items import Link
@@ -23,14 +21,7 @@ class CheckerCore(scrapy.Spider):
     config = Config()
     config_file = config.getConfigFile()
     name= 'checker'
-
     handle_httpstatus_list = [404,400,405]
-
-    custom_settings = {
-        # 'LOG_LEVEL':'DEBUG'
-    }
-
-    
 
     def __init__(self,url=None, user_agent=None, *args, **kwargs):
         super(CheckerCore, self).__init__(*args, **kwargs)
@@ -39,10 +30,9 @@ class CheckerCore(scrapy.Spider):
         else :
             url_tmp = 'http://' + url
             url= urljoin(url_tmp, '/sitemap.xml')
-
+            
         self.url = url
         self.position = 0
-
 
     def start_requests(self):
         yield Request(self.url, callback=self.parse_sitemap)
