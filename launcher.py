@@ -6,12 +6,11 @@ from config  import Config
 import os
 from datetime import datetime
 
+
 class Launcher(object):
 
     def __init__(self, export=None, obey=None, log_level=None, log=None, useragent=None):
-        # self.list = args
         config = Config()
-
         self.config_file = config.getConfigFile()
         self.settings = get_project_settings()
         _export = export
@@ -56,6 +55,7 @@ class Launcher(object):
         self.process = CrawlerProcess(self.settings)
 
     def run(self, url):
+         '''run spider job'''
         self.process.crawl('checker', url=url)
         return self.process.start()
 
