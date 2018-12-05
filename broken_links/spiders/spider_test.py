@@ -22,21 +22,18 @@ except ImportError:
 class CheckerCore(scrapy.Spider):
     config = Config()
     config_file = config.getConfigFile()
-    name= 'test'
+    name= 'checker'
 
     handle_httpstatus_list = [404,400,405]
 
     custom_settings = {
-        'LOG_LEVEL':'INFO'
+        # 'LOG_LEVEL':'DEBUG'
     }
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36',
-    }
+    
 
-    def __init__(self, crawlID=None,url = None , *args, **kwargs):
+    def __init__(self,url=None, user_agent=None, *args, **kwargs):
         super(CheckerCore, self).__init__(*args, **kwargs)
-        self.domain = url
         if url.startswith('http://') or url.startswith('https://'):
             url =urljoin(url, '/sitemap.xml')
         else :
@@ -46,18 +43,19 @@ class CheckerCore(scrapy.Spider):
         self.url = url
         self.position = 0
 
+
     def start_requests(self):
-        yield Request(self.url, callback=self.parse_sitemap,headers= self.headers)
+        yield Request(self.url, callback=self.parse_sitemap)
 
     def parse_sitemap(self, response):
         sitemap = Sitemap(response.body)
         for site_url in sitemap:
             url = site_url['loc']
             if "sitemap" in url or ".xml" in url:
-                yield Request(url,self.parse_sitemap )
+                yield Request(url,self.parse_sitemap)
 
             else :
-                yield Request(url,self.parse_article, headers= self.headers)
+                yield Request(url,self.parse_article)
 
     def parse_article(self, response):
         social_domains = ('buzzfeed.com','facebook.com','vk.com','pinterest.com','twitter.com','instagram.com','tumblr.com')
