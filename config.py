@@ -6,7 +6,7 @@ class Config(object):
 
     social_domains = ('buzzfeed.com', 'facebook.com', 'vk.com',
                       'pinterest.com', 'twitter.com', 'instagram.com',
-                      'tumblr.com')
+                      'tumblr.com', 'disqus.com')
 
     def __init__(self):
 
