@@ -40,7 +40,7 @@ class CheckerCore(scrapy.Spider):
         sitemap = Sitemap(response.body)
         for site_url in sitemap:
             url = site_url['loc']
-            if "sitemap" in url or ".xml" in url:
+            if "sitemap" in url and ".xml" in url:
                 yield Request(url, self.parse_sitemap)
 
             else:
