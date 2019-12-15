@@ -312,7 +312,7 @@ version = "4.7.1"
 setuptools = "*"
 
 [metadata]
-content-hash = "03cc42f41023fed5ccba91d4d2ed184c74d505443ea2a41501665747ee8b1ac9"
+content-hash = "b15b0871c0731a209ad730fd2a1ecb67cc960ea0507a48ac260a2761114250fa"
 python-versions = "^3.7"
 
 [metadata.hashes]
