@@ -1,8 +1,8 @@
 {
   "ignore_social": true,
-  "obey_robots": true,
+  "obey_robots": false,
   "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
   "export_format": "csv",
-  "show_log": true,
-  "log_level": "DEBUG"
+  "log_level": "DEBUG",
+  "debug": false
 }
