@@ -8,3 +8,5 @@ class Link(scrapy.Item):
     url = scrapy.Field()
     scanned_website = scrapy.Field()
     webpage = scrapy.Field()
+    reason = scrapy.Field()
+    text = scrapy.Field()
