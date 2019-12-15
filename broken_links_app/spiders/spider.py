@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import scrapy
-from broken_links.items import Link
-from config import Config
+from broken_links_app.items import Link
+from config.config import Config
 from scrapy.http import Request
 from scrapy.linkextractors import LinkExtractor
 from scrapy.shell import inspect_response

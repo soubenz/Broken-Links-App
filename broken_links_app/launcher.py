@@ -1,7 +1,7 @@
-import fire
+from fire import Fire
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-from config import Config
+from config.config import Config
 import os
 from datetime import datetime
 
@@ -78,4 +78,4 @@ class Launcher(object):
 
 
 if __name__ == '__main__':
-    fire.Fire(Launcher)
+    Fire(Launcher)
