@@ -1,6 +1,7 @@
 # Broken Links Checker
 
-The project aims to make scraping jobs' scheduling a breeze by centralizing and modularizing the developmenet spider launchers. It enables DataImpact's developers to schedule, cancel, delete Scrapinghub's jobs using an easy-to-use Command-line interface or to add a launcher module.
+A broken links checker for websites. Enter your url and wait for the results ! 
+The results are exported in your prefered format.
 
 ## Installation
 
@@ -42,8 +43,8 @@ Use flags to use a option
 
 - **export**: export format. (CSV, JSON, XML)
 - **export_dir**: export directory. default (/tmp)
-- **obey**: obey robot.txt file
-- **debig**: activate debug.
+- **obey**: obey robot.txt file. default(false)
+- **debig**: activate debug.default(true)
 - **log_dir**: debug log directory. default (/tmp)
 - **useragent**: custom useragent. default (Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36)
 
