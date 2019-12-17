@@ -1,15 +1,13 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from pprint import pprint
 
 import scrapy
-from broken_links_app.items import Link
-from config.config import Config
 from scrapy.http import Request
 from scrapy.linkextractors import LinkExtractor
-from scrapy.shell import inspect_response
-from scrapy.spiders import SitemapSpider
 from scrapy.utils.sitemap import Sitemap
-from pprint import pprint
+
+from broken_links_app.config.config import Config
+from broken_links_app.items import Link
+
 try:
     from urllib.parse import urljoin
 except ImportError:
@@ -22,8 +20,6 @@ class CheckerCore(scrapy.Spider):
 
     def __init__(self, url=None, user_agent=None, *args, **kwargs):
         super(CheckerCore, self).__init__(*args, **kwargs)
-        config = Config()
-        config_file = config.getConfigFile()
         if url.startswith('http://') or url.startswith('https://'):
             url = urljoin(url, '/sitemap.xml')
         else:

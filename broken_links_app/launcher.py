@@ -1,9 +1,11 @@
 from fire import Fire
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-from config.config import Config
+from broken_links_app.config.config import Config
+from broken_links_app.spiders.spider import CheckerCore
 import os
 from datetime import datetime
+from pathlib import Path
 
 
 class Launcher(object):
@@ -12,6 +14,8 @@ class Launcher(object):
                  obey=None,
                  log_level=None,
                  debug=None,
+                 log_dir=None,
+                 export_dir=None,
                  useragent=None):
         conf = Config()
         self.conff = conf.getConfigFile()
@@ -21,19 +25,24 @@ class Launcher(object):
         _debug = debug
         _useragent = useragent
         _log_level = log_level
+        _export_dir = export_dir
+        _log_dir = log_dir
 
         debug = _debug if isinstance(_debug, bool) else self.conff['debug']
+        export_dir = _export_dir if isinstance(
+            _debug, str) else self.conff['export_dir']
+        log_dir = _log_dir if isinstance(_log_dir,
+                                         str) else self.conff['log_dir']
 
         self.settings['LOG_FILE'] = None
         f_date = datetime.today().strftime("%d_%m_%y.%I.%M")
         if not debug:
-            self.settings['LOG_FILE'] = os.path.join(
-                os.path.dirname(os.path.realpath(__file__)), 'log',
-                f'-{f_date}.txt')
+            p_log = Path(log_dir) / 'log' / f'{f_date}.txt'
+            self.settings['LOG_FILE'] = p_log
 
         log_levels = ("DEBUG", "INFO", "WARNING", "ERROR")
         if isinstance(_log_level, str) and _log_level in log_levels:
-            self.settings['LOG_LEVEL'] = _log_level
+            self.settings['LOG_LEVEL'] = log_level
         else:
             self.settings['LOG_LEVEL'] = self.conff['log_level']
 
@@ -42,7 +51,8 @@ class Launcher(object):
         elif self.conff['export_format']:
             export_format = self.conff['export_format']
         self.settings['FEED_FORMAT'] = export_format
-        self.settings['FEED_URI'] = f'export{f_date}.{export_format}'
+        p = Path(export_dir) / 'export' / f'{f_date}.{export_format}'
+        self.settings['FEED_URI'] = p.as_uri()
 
         self.settings.update(
             self._set_setting(self.conff, {
@@ -50,11 +60,10 @@ class Launcher(object):
                 "USER_AGENT": _useragent,
             }))
 
-        self.process = CrawlerProcess(self.settings)
-
     def run(self, url):
         '''run spider job'''
-        self.process.crawl('checker', url=url)
+        self.process = CrawlerProcess(self.settings)
+        self.process.crawl(CheckerCore, url=url)
         return self.process.start()
 
     def show_config(self):
