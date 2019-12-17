@@ -1,4 +1,6 @@
-# Broken Links Checker
+[![Build Status](https://travis-ci.com/thesamartian/Broken-Links-App.svg?branch=master)](https://travis-ci.com/thesamartian/Broken-Links-App)
+
+# Broken Links Checker 
 
 A broken links checker for websites. Enter your url and wait for the results ! 
 The results are exported in your prefered format.
